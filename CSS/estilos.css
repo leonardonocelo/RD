@@ -1,0 +1,34 @@
+/*reglas
+selectores
+declaraciones
+propiedades
+valores de Css */
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+
+/* 
+SELECTOR DE ETIQUETA
+
+SELECTOR DESCENDIENTE
+
+
+SELECTOR DE CLASE 
+sintaxis: ."nombre de la clase"
+ejemplo: .link
+
+
+SELECTOR DE ID
+sintaxis: #ID
+ejemplo: #portafolio
+*/
