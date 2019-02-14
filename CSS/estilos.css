@@ -5,12 +5,14 @@ propiedades
 valores de Css */
 body{
     font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
 }
 h1{
     font-size: 40px;
     line-height: 1.5;
     letter-spacing: -.2px;
     color: white;
+    margin: 
 }
 h1 strong{
     color: #026fff;
@@ -33,8 +35,17 @@ h6{
     background-size: 500px 300px;
     background-repeat: no-repeat;
     background-position-x: right;
-
-
+}
+.portfolio{
+    background: #fafafa;
+}
+.project{
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 10px; 
+    margin-bottom: 15px;
+    padding: 20px;   
+    background: white;
 }
 .project-details{
     width: 500px;
@@ -50,6 +61,17 @@ h6{
     color: white;
     text-decoration: none;
 
+}
+.flexbox{
+    display: flex;
+    flex-wrap:wrap;
+
+}
+.box{
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    flex-shrink: 0;
 }
 /* 
 SELECTOR DE ETIQUETA
