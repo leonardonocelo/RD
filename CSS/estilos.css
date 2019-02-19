@@ -3,6 +3,7 @@ selectores
 declaraciones
 propiedades
 valores de Css */
+
 body{
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
@@ -48,8 +49,10 @@ h6{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
-.her-image{
+
+.hero-image{
     object-fit: cover; /*para que la imagen este dimencionada de forma correcta*/
 }
 .portfolio{
@@ -66,6 +69,7 @@ h6{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /*para que los elementos se apilen uno debajo del otro*/
 }
 .project-course,
 .project-date,
@@ -87,10 +91,13 @@ h6{
     margin-bottom: 10px;
 }
 .project-details{
-    width: 500px;
+    width: 50%;
 }
 .project-imageContainer {
-    width: 500px;
+    width: 50%;
+}
+.project-imageContainer img{
+max-width: 100%;
 }
 .header {
     background-color: #1b2127;
@@ -99,6 +106,7 @@ h6{
     height: 70px;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 ol,
 ul{
@@ -147,6 +155,7 @@ figure{
     background-color: #1b2127;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .footer img{
     vertical-align: middle;
@@ -154,24 +163,24 @@ figure{
 .footer a{
     color: white;
 }
-.event-list-tittle{
-    margin-left: 20px;
-}
 .event-list{
     display: flex;
     flex-wrap: wrap;
 }
+.event-list-tittle{
+    margin-left: 20px;
+}
 .event{
-    margin: 10px;
-    width: 480px;
-    flex-shrink: 0;
+    margin: 1%;
+    width: 48%;
+    flex-shrink: 0; 
     border-radius: 10px;
     overflow: hidden;
     background: #f4fbff;
 }
 .event img{
     width: 480px;
-    height: 200px;
+    height: 0200 px;
     object-fit: cover;
 }
 .event-detail{
@@ -199,13 +208,8 @@ figure{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
-<<<<<<< HEAD
-.social{
-    
-}
-=======
->>>>>>> imagenes
 .social-link{
     display: inline-block;
     width: 50px;
@@ -237,43 +241,151 @@ figure{
     background-position-x: 5px;
 }
 .form-email button{
-    display: block;
-    margin-top: 10px;
-    background: transparent;
+    display: block; /* es el display por defecto el cual hace que los elementos caigan */
+    margin-top: 10px; /* espesifica solo la parte superior del margen */
+    background: transparent; 
     color: white;
     padding: 10px 0;
-    border-radius: 5px;
+    border-radius: 5px;/* hace que el porde tenga curvas en ves de puntas */
     width: 100px;
     margin-top: 10px;
     /*margin: 10px auto 0;*/
 }
 .form-email h3{
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif; /* familia de fuente que se utiliza  */
 }
 .container{
     /*border: 1px solid red;*/
-    width: 1000px;
+    max-width: 1000px;    /* define la maxima anchura peritida de los elementos */
+    flex: 1;
     margin: 0 auto;
-    display: inherit;
+    display: inherit;/* hereda los atributos del display padre */
     justify-content: inherit;
     align-items: inherit;
     height: inherit;
     flex-wrap: inherit;
-}
-@media screen and (max-width: 1024px){
     
 }
+.container h1{
+    text-shadow: 1px 2px 2px #000000;
+}
 
-@media screen and (max-width: 768px){
-    body{
-        
+@media screen and (max-width: 1024px){
+ .container{
+     padding: 0 1em;  /* relleno despues del margen */
+ }
+ .hero{
+     height: auto;   /* altura */
+     position: relative;  /* estara arriba de una posicion absoluta */
+     overflow: hidden; /* propiedad que ayuda para los desbordamientos */
+     padding: 2em;/* espacio o relleno dentro del margen */
+ }
+ h1{
+     font-size: 2em;/* tamaño de fuente */
+     z-index: 2;
+ }
+ .hero-image{
+     position: absolute; /* indica que su posicion sea absoluta */
+     z-index: 1;/* indica la importancia de la posicion ejmplo: "zindex 2" estara arriba de "zindex 1" */
+     left: 0; /* isquierda */
+     right: 0; /* derecha */
+     top: 0; /* arriba */
+     bottom: 0; /* abajo */
+     width: 100%; /* anchura */
+ }
+}
+@media screen and (max-width: 767px){
+    .header{
+        display: block;
+        height: auto;       
+    }
+    .header ol{
+        display: block;
+    }
+    .header ol li{
+        height: 50px;
+    }
+    .header a{
+        justify-content: center;
+    }
+    .header .logo{
+        text-align: center;
+    }
+    .project{
+        display: block;
+    }
+    .project-imageContainer{
+        width: auto;
+        text-align: center;
+    }
+    .project-details{
+        width: auto;
+        font-size: 16px;
+    }
+    .project-course,.project-date, .project-url{
+        margin: .4em 0;
+    }
+    .project-tittle{
+        font-size: 1.5em;
+        margin-bottom: .3em;
+    }
+    .project-url{
+        font-size: 1em;
+    }
+    .project-course{
+        font-size: .7em;
+    }
+    .project-date{
+        font-size: 1em;
+    }
+    .project-description{
+        font-size: .8em;
+    }
+    .event {
+        width: auto;
+        flex-shrink: initial;
+    }
+    .event img{
+        width: 100%;
     }
 }
 @media screen and (max-width: 480px){
-    
+    h1{
+        font-size: 1.5em;
+    }
+    .project-details{
+        width: auto;
+        font-size: 12px;
+    }
+    .event-detail{
+        margin: -2em .5em .5em;
+        padding: 1em;
+    }
+    .contact{
+        height: auto;
+        padding: 1.5em 0;
+        text-align: center;
+        display: block;
+    }
+    .form-email button{
+        margin: 1em auto;
+    }
+    .form-email h3{
+        margin-top: 0;
+    }
+    .footer{
+        display: block;
+        text-align: center;
+        border:1px solid transparent;
+    }
 }
 @media screen and (max-width: 320px){
-    
+    h1{
+        font-size: 1.2em;
+    }
+    .hero{
+        padding: 2em 1em;
+    }
 }
 
 
