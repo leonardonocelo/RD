@@ -62,7 +62,7 @@ h6{
 .project{
     border: 1px solid gray;
     border-radius: 10px;
-    margin: 10px; 
+    /* margin: 10px;  */
     margin-bottom: 15px;
     padding: 20px;   
     background: white;
@@ -97,7 +97,7 @@ h6{
     width: 50%;
 }
 .project-imageContainer img{
-max-width: 100%;
+    max-width: 100%;
 }
 .header {
     background-color: #1b2127;
@@ -144,8 +144,8 @@ figure{
 
 }
 .box{
-    width: 200px;
-    height: 200px;
+    width: 50px;
+    height: 50px;
     border: 1px solid red;
     flex-shrink: 0;
 }
@@ -154,6 +154,7 @@ figure{
     color: white;
     background-color: #1b2127;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -180,7 +181,7 @@ figure{
 }
 .event img{
     width: 480px;
-    height: 0200 px;
+    height: 200 px;
     object-fit: cover;
 }
 .event-detail{
@@ -214,8 +215,8 @@ figure{
     display: inline-block;
     width: 50px;
     height: 50px;
-    background-size: 50px 50px;
     margin: 0 10px;
+    background-size: 50px 50px;
 }
 .social-link.twitter{
     background-image: url('../imagenes/twitter.svg');
@@ -242,13 +243,12 @@ figure{
 }
 .form-email button{
     display: block; /* es el display por defecto el cual hace que los elementos caigan */
-    margin-top: 10px; /* espesifica solo la parte superior del margen */
     background: transparent; 
     color: white;
     padding: 10px 0;
     border-radius: 5px;/* hace que el porde tenga curvas en ves de puntas */
     width: 100px;
-    margin-top: 10px;
+    margin-top: 10px; /* espesifica solo la parte superior del margen */
     /*margin: 10px auto 0;*/
 }
 .form-email h3{
@@ -268,6 +268,32 @@ figure{
 }
 .container h1{
     text-shadow: 1px 2px 2px #000000;
+}
+
+
+@media screen and (max-width: 1023px){
+ .container{
+     padding: 0 1em;  /* relleno despues del margen */
+ }
+ .hero{
+     height: auto;   /* altura */
+     position: relative;  /* estara arriba de una posicion absoluta */
+     overflow: hidden; /* propiedad que ayuda para los desbordamientos */
+     padding: 2em;/* espacio o relleno dentro del margen */
+ }
+ .hero-image{
+     position: absolute; /* indica que su posicion sea absoluta */
+     z-index: 1;/* indica la importancia de la posicion ejmplo: "zindex 2" estara arriba de "zindex 1" */
+     left: 0; /* isquierda */
+     right: 0; /* derecha */
+     top: 0; /* arriba */
+     bottom: 0; /* abajo */
+     width: 100%; /* anchura */
+    }
+    h1{
+        font-size: 2em;/* tamaño de fuente */
+        z-index: 2;
+    }
 }
 .html-video{
     width: 100%;
@@ -290,31 +316,6 @@ figure{
     padding-top: 56.25%;
     background: blue;
     position: relative;
-}
-
-@media screen and (max-width: 1024px){
- .container{
-     padding: 0 1em;  /* relleno despues del margen */
- }
- .hero{
-     height: auto;   /* altura */
-     position: relative;  /* estara arriba de una posicion absoluta */
-     overflow: hidden; /* propiedad que ayuda para los desbordamientos */
-     padding: 2em;/* espacio o relleno dentro del margen */
- }
- h1{
-     font-size: 2em;/* tamaño de fuente */
-     z-index: 2;
- }
- .hero-image{
-     position: absolute; /* indica que su posicion sea absoluta */
-     z-index: 1;/* indica la importancia de la posicion ejmplo: "zindex 2" estara arriba de "zindex 1" */
-     left: 0; /* isquierda */
-     right: 0; /* derecha */
-     top: 0; /* arriba */
-     bottom: 0; /* abajo */
-     width: 100%; /* anchura */
- }
 }
 @media screen and (max-width: 767px){
     .header{
