@@ -379,7 +379,7 @@ figure{
         border:1px solid transparent;
     }
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 356px){
     h1{
         font-size: 1.2em;
     }
