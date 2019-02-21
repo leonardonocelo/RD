@@ -393,7 +393,7 @@ figure{
         font-size: .8em;
     }
     .event {
-        width: auto;
+        width: 100%;
         flex-shrink: initial;
     }
     .event img{
