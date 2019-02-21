@@ -297,6 +297,9 @@ figure{
 .container h1{
     text-shadow: 1px 2px 2px #000000;
 }
+.burger-button{
+    display: none;
+}
 
 
 @media screen and (max-width: 1023px){
@@ -322,6 +325,7 @@ figure{
         font-size: 2em;/* tamaño de fuente */
         z-index: 2;
     }
+    
 }
 .html-video{
     width: 100%;
@@ -346,6 +350,21 @@ figure{
     position: relative;
 }
 @media screen and (max-width: 767px){
+    .burger-button{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(0,0,0,.8); /* rgba (rojo, verde, azul, opacidad) */
+        display:block;
+        line-height: 40px;
+        text-align: center;
+        position: fixed;
+        z-index: 4;
+        left: 5px;
+        top: 5px;
+        color: white;
+    }
+    
     .header{
         display: block;
         height: auto;       
@@ -358,9 +377,30 @@ figure{
     }
     .header a{
         justify-content: center;
+        height: 40px;
+        font-size: 2em;
+        text-decoration: underline;
+        margin-bottom: .5em;
     }
     .header .logo{
         text-align: center;
+    }
+    .menu{
+        position: fixed;
+        /* background: red; */
+        background: rgba(5, 111, 255, .7);
+        z-index: 3;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+    }
+    .menu.is-active{
+        left: 0;
     }
     .project{
         display: block;
@@ -400,7 +440,7 @@ figure{
         width: 100%;
     }
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 579px){
     h1{
         font-size: 1.5em;
     }
@@ -430,7 +470,7 @@ figure{
         border:1px solid transparent;
     }
 }
-@media screen and (max-width: 380px){
+@media screen and (max-width: 439px){
     h1{
         font-size: 1.2em;
     }
