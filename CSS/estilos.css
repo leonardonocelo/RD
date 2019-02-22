@@ -14,6 +14,7 @@ valores de Css */
     font-style: normal;
   }
   
+  
   [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
@@ -213,6 +214,7 @@ figure{
     object-fit: cover;
 }
 .event-detail{
+    z-index: 5;
     margin: 20px 40px;
     margin-top:-40px;
     background-color: white;
